@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <title>calculator demo</title>
+    <style>
+        div{
+            border: 5px solid blue;
+            width: 40%;
+            margin: auto;
+            padding: 10px;
+            
+        }
+        input[type=text]{
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+           
+        }
+        input[type=button]{
+            padding: 10px;
+        }
+    </style>
+    <script>
+       
+        function add(){
+            var s1= window.document.f1.n1.value;
+            var s2= window.document.f1.n2.value;
+            var s3= parseInt(s1)+parseInt(s2);
+            window.document.f1.result.value= s3;
+           
+        }
+        function sub(){
+            var s1= window.document.f1.n1.value;
+            var s2= window.document.f1.n2.value;
+            var s3= parseInt(s1)-parseInt(s2);
+            window.document.f1.result.value= s3;
+           
+        }
+        function mul(){
+            var s1= window.document.f1.n1.value;
+            var s2= window.document.f1.n2.value;
+            var s3= parseInt(s1)*parseInt(s2);
+            window.document.f1.result.value= s3;
+           
+        }
+        function div(){
+            var s1= window.document.f1.n1.value;
+            var s2= window.document.f1.n2.value;
+            var s3= parseInt(s1)/parseInt(s2);
+            window.document.f1.result.value= s3;
+           
+        }
+        
+    </script>
+   </head>
+   <body>
+       <div>
+           <form name="f1">
+                <input type="text" name="n1" placeholder="enter first number">
+                <input type="text"  name="n2" placeholder="Enter second number"><br><br>
+                <input type="button"  name="addition" value="      +     " onclick="add()">
+                <input type="button"  name="substraction" value="      -     " onclick="sub()">
+                <input type="button"  name="multiply" value="      *     " onclick="mul()">
+                <input type="button" name="division" value="      /     " onclick="div()">
+                <input type="reset" name="reset" ><br><br>
+                <input type="text"  name="result" placeholder="result">
+           </form>
+      </div>
+
+    </body>
+
+</html>
